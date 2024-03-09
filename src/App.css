@@ -1,0 +1,269 @@
+/* Acá van los colores que se usaran para la aplicación */
+:root {
+  --color-primary: #2E2828;
+  --color-secondary: #503A3A;
+  --color-tertiary: #F65151;
+  --color-quaternary: #FEF4F4;
+  --color-danger: #F65151;
+  --color-success: #336633;
+}
+
+::-webkit-scrollbar {
+  width: .75rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-quaternary);
+  border-radius: 18px;
+}
+
+/* Estilos Core */
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+h2 {
+  font-size: calc(1.325rem + .9vw);
+}
+
+h3 {
+  font-size: calc(1.3rem + .6vw);
+}
+
+hr {
+  width: 90%;
+  border-radius: 50%;
+}
+
+button {
+  border-radius: 12px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  border: none;
+  height: 45px;
+}
+
+/* Body */
+#root {
+  background-color: var(--color-primary);
+  border-radius: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  position: relative;
+  row-gap: 30px;
+}
+
+.addTaskSection form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputTask {
+  height: 43px;
+  width: 300px;
+  border: 1px solid var(--color-quaternary);
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.buttonAddTask {
+  background-color: var(--color-secondary);
+}
+
+
+/* Header */
+.tasksHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasksHeader>div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tasksHeader p {
+  color: var(--color-quaternary);
+  font-weight: 700;
+}
+
+.tasksHeader span {
+  background: var(--color-secondary);
+  color: var(--color-quaternary);
+  padding: 1px 9px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Tasks Container */
+.tasksSection {
+  margin-top: 15px;
+  border: 2px solid var(--color-quaternary);
+  border-radius: 12px;
+  width: 100%;
+  overflow: auto;
+  min-height: 300px;
+  min-width: 720px;
+  max-height: 300px;
+  padding: 15px 0;
+}
+
+.tasksSection .taskCompleted .completed-task-btn {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.tasksSection .taskName .task-completed {
+  color: var(--color-success);
+  text-decoration: line-through;
+}
+
+.tasksSection .taskCompleted .completed-task-btn span {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  border: 2px solid var(--color-quaternary);
+  background: none;
+  border: none;
+}
+
+.tasksSection .taskCompleted .completed-task-btn.completed span {
+  background: var(--color-success);
+}
+
+.tasksSection article {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.tasksSection article.completed {
+  background-color: var(--color-success);
+  color: var(--color-quaternary);
+}
+
+.tasksSection article .taskName {
+  text-align: start;
+  width: -webkit-fill-available;
+}
+
+.tasksSection article .taskDone,
+.tasksSection article .taskEdit,
+.tasksSection article .taskDelete {
+  width: 50px;
+}
+
+.tasksSection article span {
+  background-color: var(--color-secondary);
+  color: var(--color-quaternary);
+  border-radius: 50%;
+  width: 25px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Edit Task Modal */
+.edit-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.edit-modal .container {
+  background-color: var(--color-primary);
+  height: fit-content;
+  width: 600px;
+  border-radius: 18px;
+  padding: 2rem 1rem;
+}
+
+.edit-modal form {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+footer button {
+  background-color: var(--color-secondary);
+  min-width: 200px;
+}
+
+.logo {
+  width: calc(1.375rem + 1.5vw);
+  animation: logo-spin 2.5s linear infinite;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
